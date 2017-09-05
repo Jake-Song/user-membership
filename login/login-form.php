@@ -4,6 +4,11 @@ function custom_login_form(){
       'redirect' => home_url(),
       'id_username' => 'user',
       'id_password' => 'pass',
+      'label_username' => 'Username or Email',
+	    'label_password' => 'Password',
+      'label_log_in'   => 'Log In',
+      'id_submit'      => 'login',
+      'class_submit'   => 'submit-button',
      );
 
      $login  = (isset($_GET['login']) ) ? $_GET['login'] : 0;
@@ -17,16 +22,11 @@ function custom_login_form(){
       }
 ?>
 
-  <div class="login-branding">
-    <a href="#" class="login-logo">Hongkiat.com</a>
-    <p class="login-desc">
-      Hongkiat.com is a design weblog dedicated to designers and bloggers. We constantly publish useful tricks, tools, tutorials and inspirational artworks.
-    </p>
-  </div>
   <div class="login-form">
 
     <?php wp_login_form( $args ); ?>
-    <a href="<?php echo site_url(); ?>">Lost Password?</a>
+
+    <a href="<?php echo esc_url( site_url('/') . 'reset' ); ?>">Lost Password?</a>
   </div>
 
 <?php

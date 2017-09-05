@@ -9,7 +9,10 @@ function complete_registration() {
         );
 
         $user = wp_insert_user( $userdata );
-        
-        echo 'Registration complete. Goto <a href="' . get_site_url() . '/wp-login.php">login page</a>.';
+
+        $success_message = 'Registration complete. Goto <a href="' . get_site_url() . '/wp-login.php">login page</a>.';
+
+        wp_send_json( $success_message );
+
     }
 }

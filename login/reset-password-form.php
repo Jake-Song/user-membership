@@ -60,13 +60,14 @@
 
     <form method="post">
         <fieldset>
+            <h2>Reset Your Password</h2>
             <p>Please enter your username or email address. You will receive a link to create a new password via email.</p>
             <p><label for="user_login">Username or E-mail:</label>
                 <?php $user_login = isset( $_POST['user_login'] ) ? $_POST['user_login'] : ''; ?>
                 <input type="text" name="user_login" id="user_login" value="<?php echo $user_login; ?>" /></p>
             <p>
                 <input type="hidden" name="action" value="reset" />
-                <input type="submit" value="Get New Password" class="button" id="submit" />
+                <input type="submit" value="Reset Password" class="submit-button" id="reset-submit" />
             </p>
         </fieldset>
 </form>

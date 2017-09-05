@@ -33,15 +33,18 @@
 
     if ( is_wp_error( $reg_errors ) ) {
 
+      $error_message = '';
+
       foreach ( $reg_errors->get_error_messages() as $error ) {
 
-          echo '<div>';
-          echo '<strong>ERROR</strong>:';
-          echo $error . '<br/>';
-          echo '</div>';
+          $error_message .= '<div>';
+          $error_message .= '<strong>ERROR</strong>:';
+          $error_message .= $error . '<br/>';
+          $error_message .= '</div>';
 
       }
- 
+      if( !empty( $error_message ) ){
+        wp_send_json( $error_message );
+      }
     }
-
   }
