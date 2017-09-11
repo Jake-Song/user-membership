@@ -10,9 +10,18 @@ function complete_registration() {
 
         $user = wp_insert_user( $userdata );
 
-        $success_message = 'Registration complete. Goto <a href="' . get_site_url() . '/wp-login.php">login page</a>.';
+        $user_data = get_user_by( 'id', $user );
 
-        wp_send_json( $success_message );
+        $username = $user_data->user_nicename;
+        $user_id = $user_data->ID;
+
+        wp_set_current_user($user_id, $username);
+        wp_set_auth_cookie($user_id);
+        do_action('wp_login', $username, $user);
+
+        $success_message = 'Registration complete. Goto <a href="' . esc_url(get_site_url()) . '">login page</a>.';
+
+        wp_send_json_success( $success_message );
 
     }
 }

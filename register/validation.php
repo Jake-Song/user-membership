@@ -44,7 +44,7 @@
 
       }
       if( !empty( $error_message ) ){
-        wp_send_json( $error_message );
+        wp_send_json_error( $error_message );
       }
     }
   }
