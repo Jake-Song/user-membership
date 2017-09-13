@@ -1,6 +1,6 @@
 <?php
 function registration_form( $username, $password, $email ){
-    
+
   echo '
     <form id="registration-form" action="' . $_SERVER['REQUEST_URI'] . '" method="post">
     <div>
@@ -19,7 +19,7 @@ function registration_form( $username, $password, $email ){
     </div>
 
     <input type="submit" id="registration" name="submit" class="submit-button" value="Register"/>
-
+    
     <div class="terms">
       By signing up you agree to our <a href="#">Terms and Policies.</a>
     </div>
