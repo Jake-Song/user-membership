@@ -25,13 +25,13 @@ function custom_login_form(){
   <div class="login-form">
 
     <?php wp_login_form( $args ); ?>
-
+    <div class="loading-pulse"></div>
     <div class="tologin">
-      Have your account? Please click here to <a href="#">sign on.</a>
+      Have your account? Please click here to <a href="#">sign up.</a>
     </div>
 
     <a href="<?php echo esc_url( site_url('/') . 'reset' ); ?>">Lost Password?</a>
-    
+
   </div>
 
 <?php
