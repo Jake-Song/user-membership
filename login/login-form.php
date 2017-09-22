@@ -26,7 +26,7 @@ function custom_login_form(){
 
     <?php wp_login_form( $args ); ?>
     <div class="loading-pulse"></div>
-    <div class="tologin">
+    <div class="toregister">
       Have your account? Please click here to <a href="#">sign up.</a>
     </div>
 

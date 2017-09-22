@@ -19,12 +19,14 @@ function registration_form( $username, $password, $email ){
     </div>
 
     <input type="submit" id="registration" name="submit" class="submit-button" value="Register"/>
-
+    <div class="tologin">
+      Have an account? Please <a href="">Sign In.</a>
+    </div>
     <div class="terms">
       By signing up you agree to our <a href="#">Terms and Policies.</a>
     </div>
     </form>
-    
+
     ';
 
 }

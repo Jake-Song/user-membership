@@ -19,7 +19,9 @@ function complete_registration() {
         wp_set_auth_cookie($user_id);
         do_action('wp_login', $username, $user);
 
-        $success_message = 'Registration complete. Goto <a href="' . esc_url(get_site_url()) . '">login page</a>.';
+        $success_message = 'Registration complete. You have your own wishlist.
+
+        Goto <a href="' . esc_url(get_site_url()) . '">the page You have seen.</a>';
 
         wp_send_json_success( $success_message );
 
