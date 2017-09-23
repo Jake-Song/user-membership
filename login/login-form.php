@@ -27,7 +27,7 @@ function custom_login_form(){
     <?php wp_login_form( $args ); ?>
     <div class="loading-pulse"></div>
     <div class="toregister">
-      Have your account? Please click here to <a href="#">sign up.</a>
+      Have your account? Please click here to <a href="#">Sign up.</a>
     </div>
 
     <a href="<?php echo esc_url( site_url('/') . 'reset' ); ?>">Lost Password?</a>
