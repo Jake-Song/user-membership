@@ -61,7 +61,7 @@
     <form method="post">
         <fieldset>
             <h2>Reset Your Password</h2>
-            <p>Please enter your username or email address. You will receive a link to create a new password via email.</p>
+            <p>Please enter your email address. You will receive a link to create a new password via email.</p>
             <p><label for="user_login">Username or E-mail:</label>
                 <?php $user_login = isset( $_POST['user_login'] ) ? $_POST['user_login'] : ''; ?>
                 <input type="text" name="user_login" id="user_login" value="<?php echo $user_login; ?>" /></p>
